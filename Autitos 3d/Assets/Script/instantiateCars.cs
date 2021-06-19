@@ -5,10 +5,11 @@ using UnityEngine;
 public class instantiateCars : MonoBehaviour
 {
    public int mov;
-    public int cont=0;
-    public bool PressedOnce = false;
-    public bool PressedTwice = false;
-    bool normalSpeed = false;
+    public  int cont=0;
+   public  bool normalSpeed = false;
+    public static bool colorBlue = false;
+    public static bool colorRed = false;
+
     public void OnTriggerExit(Collider other)
     {
         if (other.tag == "Trigger")
@@ -27,19 +28,19 @@ public class instantiateCars : MonoBehaviour
     {
         switch (CarsManager.randPos)
         {
-            case 1:
+            case 0:
                 mov = 1;
                 //z-
                 break;
-            case 2:
+            case 1:
                 mov = 2;
                 //z+
                 break;
-            case 3:
+            case 2:
                 mov = 3;
                 //x-
                 break;
-            case 4:
+            case 3:
                 mov = 4;
                 //x+
                 break;
@@ -50,6 +51,8 @@ public class instantiateCars : MonoBehaviour
     {
         if (cont % 2 != 0 &&!normalSpeed)
         {
+            colorRed = true;
+            colorBlue = false;
             switch (mov)
             {
                 case 1:
@@ -73,6 +76,8 @@ public class instantiateCars : MonoBehaviour
         }
         else if ( cont % 2 == 0 && cont != 0 &&!normalSpeed)
         {
+            colorRed = false;
+            colorBlue = true;
             switch (mov)
             {
                 case 1:
@@ -95,7 +100,8 @@ public class instantiateCars : MonoBehaviour
 
         }
         else if (cont==0 || normalSpeed) {
-
+            colorRed = false;
+            colorBlue = true;
             switch (mov)
             {
                 case 1:

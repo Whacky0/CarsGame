@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8359674921011358760}
   - component: {fileID: 8499028952320269788}
   - component: {fileID: 4291183364526659834}
+  - component: {fileID: 5230951834325103849}
   m_Layer: 0
   m_Name: Car08
   m_TagString: Car
@@ -110,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104005430801780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.250885, y: 2.4049683, z: -5.9608765}
+  m_LocalPosition: {x: -5.001892, y: 9.802795, z: -0.70806885}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_Children:
   - {fileID: 4818461459244214}
@@ -202,8 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mov: 0
   cont: 0
-  PressedOnce: 0
-  PressedTwice: 0
+  normalSpeed: 0
 --- !u!65 &8499028952320269788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -229,6 +229,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6c8d2b9ed7930498dcb8dc39c08db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5230951834325103849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104005430801780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75cd55f1d464cd84c961983318393070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blue: {fileID: 2100000, guid: f025fa1036ebf6e4081987ef41674fb2, type: 2}
+  Red: {fileID: 2100000, guid: 3e56ece2e1116884a9c9329e2488f105, type: 2}
+  car: {fileID: 1104005430801780}
 --- !u!1 &1222053547440834
 GameObject:
   m_ObjectHideFlags: 0
