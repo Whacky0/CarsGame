@@ -9,7 +9,8 @@ public class CarsManager : MonoBehaviour
    public static int randPos;
     int[] randoms = new int[4];
     int numeroAnterior=-1;
-
+    public GameObject cont;
+    public GameObject menuPause;
     private void Awake()
     {
         for(int i=0; i < 4; i++)
@@ -26,12 +27,12 @@ public class CarsManager : MonoBehaviour
     private void Update()
     {
 
-        if (delay < 0)
+        if (delay < 0 && cont.activeInHierarchy==false &&menuPause.activeInHierarchy==false)
         {
             insCar();
             return;
         }
-        else
+        else if(delay>=0&& cont.activeInHierarchy == false &&menuPause.activeInHierarchy == false)
         {
 
             delay -= Time.deltaTime;

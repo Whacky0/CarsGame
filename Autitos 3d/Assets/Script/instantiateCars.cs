@@ -57,6 +57,11 @@ public class instantiateCars : MonoBehaviour
 
     private void Update()
     {
+        if (Pause.Pausa)
+        {
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+        }
+        else { 
         if (cont % 2 != 0 &&!normalSpeed)
         {
             colorRed = true;
@@ -130,7 +135,8 @@ public class instantiateCars : MonoBehaviour
                     break;
 
             }
-        } 
+        }
+        }
     }
     
     }
