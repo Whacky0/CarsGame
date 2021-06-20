@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CarsManager : MonoBehaviour
 {
-    float delay;
+    public static float delay;
     public GameObject car;
    public static int randPos;
     int[] randoms = new int[4];
@@ -21,12 +21,13 @@ public class CarsManager : MonoBehaviour
         Debug.Log(randPos);
 
     }
+
+    
     private void Update()
     {
 
         if (delay < 0)
         {
-
             insCar();
             return;
         }
@@ -115,7 +116,8 @@ public class CarsManager : MonoBehaviour
                 }
             }
 
-            delay = 1f;
+            delay = TimeManager.delay;
+            Debug.Log(delay);
 
         }
         else

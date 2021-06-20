@@ -23,6 +23,14 @@ public class instantiateCars : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        int rand = Random.Range(0, 10);
+        if (rand <= 2)
+        {
+            cont = 1;
+        }
+    }
 
     private void Awake()
     {
@@ -56,19 +64,19 @@ public class instantiateCars : MonoBehaviour
             switch (mov)
             {
                 case 1:
-                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 0.3f);
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 0.18f);
                     //z-
                     break;
                 case 2:
-                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z + 0.3f);
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z + 0.18f);
                     //z+
                     break;
                 case 3:
-                    gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.3f, gameObject.transform.position.y, gameObject.transform.position.z);
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.18f, gameObject.transform.position.y, gameObject.transform.position.z);
                     //x-
                     break;
                 case 4:
-                    gameObject.transform.position = new Vector3(gameObject.transform.position.x + 0.3f, gameObject.transform.position.y, gameObject.transform.position.z);
+                    gameObject.transform.position = new Vector3(gameObject.transform.position.x + 0.18f, gameObject.transform.position.y, gameObject.transform.position.z);
                     //x+
                     break;
             }
