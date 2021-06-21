@@ -1582,6 +1582,7 @@ GameObject:
   - component: {fileID: 1543036642}
   - component: {fileID: 1543036641}
   - component: {fileID: 1543036644}
+  - component: {fileID: 1543036645}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1607,7 +1608,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.28465346, g: 0.59607846, b: 0.19215685, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1670,6 +1671,18 @@ MonoBehaviour:
   UnitsSize: 35
   constraint: 1
   camera: {fileID: 1543036642}
+--- !u!114 &1543036645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543036640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bfc85df60f1ae74d8b2505561cfcf6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1695018038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,6 +1785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1722926322}
+  - component: {fileID: 1722926323}
   - component: {fileID: 1722926321}
   m_Layer: 0
   m_Name: Streets
@@ -1789,7 +1803,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1722926320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24d7d4aa45feebd4abdd6372b5030f26, type: 3}
+  m_Script: {fileID: 11500000, guid: ca5e21a191387944e80d8ef1a928d812, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1722926322
@@ -1820,6 +1834,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1722926323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722926320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db02017e4914a34d93229cde8dc8e9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1723385394
 PrefabInstance:
   m_ObjectHideFlags: 0

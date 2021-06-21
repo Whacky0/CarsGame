@@ -35,7 +35,6 @@ public class PauseMenu : MonoBehaviour
     }
     public void exitGame()
     {
-        saves.Lost = true;
         Application.Quit();
     }
     bool isPlaying()

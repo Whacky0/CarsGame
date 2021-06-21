@@ -11,7 +11,7 @@ public class Contador : MonoBehaviour
     bool startCont;
     private void OnEnable()
     {
-        contador = 4;
+        contador = 3;
         startCont = false;
         Debug.Log("existe");
 
@@ -21,12 +21,10 @@ public class Contador : MonoBehaviour
     void Update()
     {
 
-
         if ( contador > 0)
-        {
-            
+        {           
             contador -= Time.deltaTime;
-            if (contador < 3) { 
+            if (contador < 3 ) { 
                 TextMeshProUGUI text = gameObject.GetComponent<TextMeshProUGUI>();
             text.text = Mathf.RoundToInt(contador).ToString();
             }

@@ -8,7 +8,6 @@ public class Pause : MonoBehaviour
     public static bool Pausa;
     public GameObject pauseMenu;
     public Animator anim;
-    bool play = false;
 
     private void OnEnable()
     {

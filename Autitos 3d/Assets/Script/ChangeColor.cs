@@ -19,12 +19,10 @@ public class ChangeColor : MonoBehaviour
         if (!dark) { 
         if (seconds >=0  && b >= 0.1886792f)
         {
-            Debug.Log(seconds);
-            r = r - 0.0001f;
-            g = g - 0.0001f;
-            b = b - 0.0001f;
+            r = r - 0.0005f;
+            g = g - 0.0005f;
+            b = b - 0.0005f;
             Camera.main.backgroundColor = new Color(r, g, b);
-            Debug.Log(r + g + b);
 
         }
         else
@@ -38,12 +36,10 @@ public class ChangeColor : MonoBehaviour
         {
             if (seconds >= 0 && b <= 0.6981132f)
             {
-                Debug.Log(seconds);
-                r = r + 0.0001f;
-                g = g + 0.0001f;
-                b = b + 0.0001f;
+                r = r + 0.0005f;
+                g = g + 0.0005f;
+                b = b + 0.0005f;
                 Camera.main.backgroundColor = new Color(r, g, b);
-                Debug.Log(r + g + b);
 
             }
             else
