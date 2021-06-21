@@ -19,7 +19,6 @@ public class CarsManager : MonoBehaviour
         }
 
 
-        Debug.Log(randPos);
 
     }
 

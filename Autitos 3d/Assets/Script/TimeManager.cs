@@ -7,12 +7,11 @@ using TMPro;
 public class TimeManager : MonoBehaviour
 {
     public TextMeshProUGUI Tiempo;
-    float seconds;
-    bool cambiarDelay=false;
-    bool c = true;
+    public static float seconds;
     public static float delay=2f;
     public GameObject cont;
     public GameObject menuPause;
+
 
     // Start is called before the first frame update
     void Start()
@@ -54,7 +53,15 @@ public class TimeManager : MonoBehaviour
         {
             delay = 1.3f;
         }
+
+
+
+        }
+        
+
+
     }
-    }
+
+
 
 }
