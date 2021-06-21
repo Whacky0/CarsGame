@@ -8,14 +8,16 @@ public class TimeManager : MonoBehaviour
 {
     public TextMeshProUGUI Tiempo;
     public static float seconds;
-    public static float delay=2f;
+    public static float delay=1.6f;
     public GameObject cont;
     public GameObject menuPause;
 
     private void Awake()
     {
-        Tiempo.text = 0.ToString();
+       delay = 1.6f;
+    Tiempo.text = 0.ToString();
         Time.timeScale = 1;
+        Debug.Log(delay);
     }
 
 
@@ -28,31 +30,28 @@ public class TimeManager : MonoBehaviour
         Tiempo.text =Mathf.RoundToInt(seconds).ToString();
         if (Tiempo.text == 10.ToString() )
         {
-            delay= 1.9f;
+            delay= 1.5f;
         }
         if (Tiempo.text == 30.ToString())
         {
-            delay = 1.8f;
+            delay = 1.4f;
         }
         if (Tiempo.text == 50.ToString())
         {
-            delay = 1.7f;
+            delay = 1.3f;
         }
         if (Tiempo.text == 70.ToString())
         {
-            delay = 1.6f;
+            delay = 1.2f;
         }
         if (Tiempo.text == 90.ToString())
         {
-            delay = 1.5f;
+            delay = 1.1f;
         }
-        if (Tiempo.text == 120.ToString())
-        {
-            delay = 1.4f;
-        }
+
         if (Tiempo.text == 150.ToString())
         {
-            delay = 1.3f;
+            delay = 1.0f;
         }
 
 

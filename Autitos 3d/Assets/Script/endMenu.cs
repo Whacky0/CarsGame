@@ -4,13 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Advertisements;
 
-
 public class endMenu : MonoBehaviour
 {
     string gameId = "101113";
     bool testMode = true;
     private void OnEnable()
     {
+        if (Application.platform == RuntimePlatform.Android) {
+            gameId = "2992547";
+        }
         Advertisement.Initialize(gameId, testMode);
         Time.timeScale = 0;
         Advertisement.Show();
