@@ -9,6 +9,9 @@ public class instantiateCars : MonoBehaviour
    public  bool normalSpeed = false;
     public static bool colorBlue = false;
     public static bool colorRed = false;
+    float rot;
+    float size;
+
 
     public void OnTriggerExit(Collider other)
     {
@@ -61,29 +64,30 @@ public class instantiateCars : MonoBehaviour
         {
             gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
         }
-        else { 
-        if (cont % 2 != 0 &&!normalSpeed)
+        else {
+            if (cont % 2 != 0 &&!normalSpeed)
         {
+
             colorRed = true;
             colorBlue = false;
             switch (mov)
             {
                 case 1:
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 0.18f);
-                    //z-
-                    break;
+                        //z-
+                        break;
                 case 2:
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z + 0.18f);
-                    //z+
-                    break;
+                        //z+
+                        break;
                 case 3:
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.18f, gameObject.transform.position.y, gameObject.transform.position.z);
-                    //x-
-                    break;
+                        //x-
+                        break;
                 case 4:
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x + 0.18f, gameObject.transform.position.y, gameObject.transform.position.z);
-                    //x+
-                    break;
+                        //x+
+                        break;
             }
 
         }
@@ -95,20 +99,20 @@ public class instantiateCars : MonoBehaviour
             {
                 case 1:
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 0.1f);
-                    //z-
-                    break;
+                        //z-
+                        break;
                 case 2:
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z + 0.1f);
-                    //z+
-                    break;
+                        //z+
+                        break;
                 case 3:
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.1f, gameObject.transform.position.y, gameObject.transform.position.z);
-                    //x-
-                    break;
+                        //x-
+                        break;
                 case 4:
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x + 0.1f, gameObject.transform.position.y, gameObject.transform.position.z);
-                    //x+
-                    break;
+                        //x+
+                        break;
             }
 
         }
@@ -119,20 +123,20 @@ public class instantiateCars : MonoBehaviour
             {
                 case 1:
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z - 0.1f);
-                    //z-
-                    break;
+                        //z-
+                        break;
                 case 2:
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z + 0.1f);
-                    //z+
-                    break;
+                        //z+
+                        break;
                 case 3:
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.1f, gameObject.transform.position.y, gameObject.transform.position.z);
-                    //x-
-                    break;
+                        //x-
+                        break;
                 case 4:
                     gameObject.transform.position = new Vector3(gameObject.transform.position.x + 0.1f, gameObject.transform.position.y, gameObject.transform.position.z);
-                    //x+
-                    break;
+                        //x+
+                        break;
 
             }
         }

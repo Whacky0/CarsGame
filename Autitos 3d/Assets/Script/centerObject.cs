@@ -8,6 +8,7 @@ public class centerObject : MonoBehaviour
     private void Awake()
     {
         gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2.5f, Camera.main.nearClipPlane+20));
+
     }
 
 

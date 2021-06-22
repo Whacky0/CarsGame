@@ -19,6 +19,7 @@ public class saves : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Application.targetFrameRate = 60;
     }
 
 

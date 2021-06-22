@@ -6,14 +6,14 @@ using UnityEngine.Advertisements;
 
 public class endMenu : MonoBehaviour
 {
-    string gameId = "101113";
+    string gameId = "4179374";
     bool testMode = true;
     private void OnEnable()
     {
         if (Application.platform == RuntimePlatform.Android) {
-            gameId = "2992547";
+            gameId = "4179374";
         }
-        Advertisement.Initialize(gameId, testMode);
+        Advertisement.Initialize(gameId, false);
         Time.timeScale = 0;
         Advertisement.Show();
 

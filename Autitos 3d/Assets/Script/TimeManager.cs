@@ -53,8 +53,22 @@ public class TimeManager : MonoBehaviour
         {
             delay = 1.0f;
         }
-
-
+            if (Tiempo.text == 200.ToString())
+            {
+                delay = 0.9f;
+            }
+            if (Tiempo.text == 250.ToString())
+            {
+                delay = 0.8f;
+            }
+            if (Tiempo.text == 350.ToString())
+            {
+                delay = 0.7f;
+            }
+            if (Tiempo.text == 500.ToString())
+            {
+                delay = 0.6f;
+            }
 
         }
         
