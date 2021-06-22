@@ -1030,6 +1030,7 @@ GameObject:
   - component: {fileID: 662520495}
   - component: {fileID: 662520496}
   - component: {fileID: 662520497}
+  - component: {fileID: 662520498}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1142,6 +1143,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcae9adac695934f9f83de816f43da9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &662520498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662520491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd69ae4050b291244a541317a65c95d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 148532075}
 --- !u!1001 &684862768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2918,7 +2932,7 @@ PrefabInstance:
     - target: {fileID: 3220396072343719159, guid: 770d7f419a1cbc44d9e110e12d33d312,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3220396072718459862, guid: 770d7f419a1cbc44d9e110e12d33d312,
         type: 3}
@@ -3819,6 +3833,10 @@ MonoBehaviour:
   car: {fileID: 1104005430801780, guid: 45fc7afeec0d59a4da930c42c4cdf952, type: 3}
   cont: {fileID: 1178181191}
   menuPause: {fileID: 405516568}
+  x: {fileID: 1037415227}
+  xM: {fileID: 846979773}
+  z: {fileID: 1910221378}
+  zM: {fileID: 754411525}
 --- !u!4 &1958957414
 Transform:
   m_ObjectHideFlags: 0

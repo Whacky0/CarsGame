@@ -11,6 +11,11 @@ public class CarsManager : MonoBehaviour
     int numeroAnterior=-1;
     public GameObject cont;
     public GameObject menuPause;
+    public GameObject x;
+    public GameObject xM;
+    public GameObject z;
+    public GameObject zM;
+
     private void Awake()
     {
         for(int i=0; i < 4; i++)
@@ -42,7 +47,7 @@ public class CarsManager : MonoBehaviour
 
     void insCar()
     {
-        car.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2.5f, Camera.main.nearClipPlane + 20));
+       // car.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2.5f, Camera.main.nearClipPlane + 20));
         randPos = Random.Range(0, 4);
         if (randoms[randPos]!=-1)
         {
@@ -53,7 +58,7 @@ public class CarsManager : MonoBehaviour
                 {
                     case 0:
                         Debug.Log(randPos);
-                        randPosition = new Vector3(car.transform.position.x - 1.5f, car.transform.position.y + 1, car.transform.position.z + 14);
+                        randPosition = xM.transform.position;
                         Instantiate(car, randPosition, Quaternion.Euler(0, 180, 0));
                         randoms[randPos] = -1;
                         numeroAnterior = randPos;
@@ -61,7 +66,7 @@ public class CarsManager : MonoBehaviour
                         break;
                     case 1:
                         Debug.Log(randPos);
-                        randPosition = new Vector3(car.transform.position.x + 1.5f, car.transform.position.y + 1, car.transform.position.z - 14);
+                        randPosition = x.transform.position;
                         Instantiate(car, randPosition, Quaternion.identity);
                         randoms[randPos] = -1;
                         numeroAnterior = randPos;
@@ -69,7 +74,7 @@ public class CarsManager : MonoBehaviour
                         break;
                     case 2:
                         Debug.Log(randPos);
-                        randPosition = new Vector3(car.transform.position.x + 14, car.transform.position.y + 1, car.transform.position.z + 1.5f);
+                        randPosition = z.transform.position;
                         Instantiate(car, randPosition, Quaternion.Euler(0, -90, 0));
                         randoms[randPos] = -1;
                         numeroAnterior = randPos;
@@ -77,41 +82,46 @@ public class CarsManager : MonoBehaviour
                         break;
                     case 3:
                         Debug.Log(randPos);
-                        randPosition = new Vector3(car.transform.position.x - 14, car.transform.position.y + 1, car.transform.position.z - 1.5f);
+                        randPosition = zM.transform.position;
                         Instantiate(car, randPosition, Quaternion.Euler(0, 90, 0));
                         randoms[randPos] = -1;
                         numeroAnterior = randPos;
                         //x+
                         break;
                 }
+
             }
             else
             {
                 switch (randoms[randPos])
                 {
                     case 0:
-                        randPosition = new Vector3(car.transform.position.x - 1.5f, car.transform.position.y + 1, car.transform.position.z + 14);
+                        Debug.Log(randPos);
+                        randPosition = xM.transform.position;
                         Instantiate(car, randPosition, Quaternion.Euler(0, 180, 0));
                         randoms[numeroAnterior] = numeroAnterior;
                         numeroAnterior = -1;
                         //z-
                         break;
                     case 1:
-                        randPosition = new Vector3(car.transform.position.x + 1.5f, car.transform.position.y + 1, car.transform.position.z - 14);
+                        Debug.Log(randPos);
+                        randPosition = x.transform.position;
                         Instantiate(car, randPosition, Quaternion.identity);
                         randoms[numeroAnterior] = numeroAnterior;
                         numeroAnterior = -1;
                         //z+
                         break;
                     case 2:
-                        randPosition = new Vector3(car.transform.position.x + 14, car.transform.position.y + 1, car.transform.position.z + 1.5f);
+                        Debug.Log(randPos);
+                        randPosition = z.transform.position;
                         Instantiate(car, randPosition, Quaternion.Euler(0, -90, 0));
                         randoms[numeroAnterior] = numeroAnterior;
                         numeroAnterior = -1;
                         //x-
                         break;
                     case 3:
-                        randPosition = new Vector3(car.transform.position.x - 14, car.transform.position.y + 1, car.transform.position.z - 1.5f);
+                        Debug.Log(randPos);
+                        randPosition = zM.transform.position;
                         Instantiate(car, randPosition, Quaternion.Euler(0, 90, 0));
                         randoms[numeroAnterior] = numeroAnterior;
                         numeroAnterior = -1;
