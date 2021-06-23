@@ -10,7 +10,7 @@ public class RotateStreets : MonoBehaviour
 
     void Update()
     {
-        /*
+        
         if (time<=360)
         {
             time += Time.deltaTime;
@@ -23,7 +23,7 @@ public class RotateStreets : MonoBehaviour
             gameObject.transform.eulerAngles = new Vector3(0, time, 0);
 
         }
-        */
+        
        
     }
 }
